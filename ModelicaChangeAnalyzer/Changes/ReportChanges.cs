@@ -434,6 +434,50 @@ namespace ModelicaChangeAnalyzer.Changes
                 form.ExportAdd(matrixRow, sb);
             }
 
+
+            /*String[] relevantPackagesName = { "Absyn", "DAE", "Dump", "SCode", "InstStateMachineUtil", "StateMachineFlatten" };
+
+            for (int i = 1; i < releases; i++)
+            {
+
+                form.ExportAdd("", sb);
+                form.ExportAdd("Number of changes for release;" + this.releases[i].Split('\\')[this.releases[i].Split('\\').Length - 1], sb);
+
+                matrixRow = "";
+                for (int j = 0; j < relevantPackagesName.Length; j++)
+                    matrixRow +=  ";" + relevantPackagesName[j];
+                    
+                form.ExportAdd(matrixRow, sb);
+
+                for (int j = 0; j < relevantPackagesName.Length; j++)
+                {
+                    matrixRow = relevantPackagesName[j] + ";";
+                    //get package
+                    Package currentPackage = null;
+                    foreach(Package pack in resultsMatrix[i][i-1].AddedPackages)
+                        if (Array.IndexOf(relevantPackagesName, pack.Name) > -1)
+                            currentPackage = pack;
+
+                    if (currentPackage != null)
+                            matrixRow += currentPackage.NumOfAllModifiableElements(false) + ";";
+
+                    else
+                    {
+                        foreach (Package pack in resultsMatrix[i][i - 1].ModifiedPackages)
+                            if (Array.IndexOf(relevantPackagesName, pack.Name) > -1)
+                                currentPackage = pack;
+                        if (currentPackage != null)
+                            matrixRow += currentPackage.NumOfChanges + ";";
+                        else
+                            matrixRow += "0;";
+                    }
+                    form.ExportAdd(matrixRow, sb);
+                }
+
+                form.ExportAdd("", sb);
+
+            }*/
+
             form.ExportAdd("", sb);
             form.ExportAdd("**************************************************", sb);
             form.ExportAdd("", sb);

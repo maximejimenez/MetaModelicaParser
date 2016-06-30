@@ -100,6 +100,13 @@ namespace ModelicaChangeAnalyzer.Changes
             resultsArray[i].NumOfAttributesMod1 = model.NumberOfAttributes(relevancy);
             resultsArray[i].NumOfConnectorsMod1 = model.NumberOfConnectors(relevancy);
             resultsArray[i].NumOfPackagesMod1 = model.NumberOfPackages(relevancy);
+
+            String[] relevantPackagesName = { "Absyn", "DAE", "Dump", "SCode", "InstStateMachineUtil", "StateMachineFlatten" };
+
+            foreach(Package pack in model.Packages){
+                if (Array.IndexOf(relevantPackagesName, pack.Name) > -1)
+                    resultsArray[i].RelevantPackages.Add(pack);
+            }
         }
 
         // calculating results for an array of packages
@@ -184,7 +191,40 @@ namespace ModelicaChangeAnalyzer.Changes
             form.ExportAdd(array, sb);
 
             form.ExportAdd("", sb);
-           
+
+            // Temporary
+
+            for (int i = 0; i < this.releases.Length; i++)
+            {
+                form.ExportAdd("Number of elements for relevant packages of release;" + this.releases[i].Split('\\')[this.releases[i].Split('\\').Length - 1] + ";", sb);
+                array = "";
+                List<Package> relevantPackages = resultsArray[4].RelevantPackages;
+
+                foreach (Package package in relevantPackages)
+                    array += package.Name + ";";
+
+                form.ExportAdd(array, sb);
+                array = "";
+
+                Package currentPackage = null;
+                foreach (Package package in relevantPackages)
+                {
+                    foreach (Package pack in resultsArray[i].RelevantPackages)
+                    {
+                        if (pack.Name.Equals(package.Name))
+                            currentPackage = pack;
+                    }
+                    if (currentPackage == null)
+                        array += 0 + ";";
+                    else
+                        array += currentPackage.NumberOfElements(false) + ";";
+                    currentPackage = null;
+                }
+                    
+                    form.ExportAdd(array, sb);
+                    form.ExportAdd("", sb);
+            }
+
             form.ExportAdd("", sb);
             form.ExportAdd("**************************************************", sb);
             form.ExportAdd("", sb);

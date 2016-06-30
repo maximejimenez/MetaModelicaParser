@@ -539,6 +539,40 @@ namespace ModelicaChangeAnalyzer.Datamodel
                 }
             }
 
+            //String[] osef = { "Absyn", "DAE", "Dump", "SCode", "InstStateMachineUtil", "StateMachineFlatten" };
+
+            //int total = 0;
+
+            //foreach (Package package in packages)
+            //{
+                //if (addedPackages.Contains(package))
+                //{
+                //    Console.WriteLine("Package " + package.Name + " - NoC = " + package.NumOfChanges + " | (A) NoE = " + package.NumberOfElements(false));
+                //}
+                //else
+                //{
+                //   Console.WriteLine("Package " + package.Name + " - NoC = " + package.NumOfChanges + "  |  NoAE = " + package.NumberOfAddedElements());
+                //}
+                /*if (osef.Contains(package.Name))
+                {*/
+                    /*if(addedPackages.Contains(package)){
+                        total += package.NumOfAllModifiableElements(RelevantOnly);
+                        if (package.NumOfAllModifiableElements(RelevantOnly) > 0)
+                        Console.WriteLine("Package " + package.Name + " - NoModElem = " + package.NumOfAllModifiableElements(RelevantOnly));
+
+                    }
+                    else
+                    {
+                        total += package.NumOfChanges;
+                        if (package.NumOfChanges > 1)
+                            Console.WriteLine("Package " + package.Name + " - NoC = " + package.NumOfChanges);
+                    }*/
+
+                /*}*/
+            //}
+
+            //Console.WriteLine("TOTAL = " + total);
+
             return numOfChanges;
         }
 

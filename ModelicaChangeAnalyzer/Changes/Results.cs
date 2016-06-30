@@ -36,6 +36,7 @@ namespace ModelicaChangeAnalyzer.Changes
         private int numOfModifiedAttributes = 0;
         private int numOfAddedAttributes = 0;
         private int numOfRemovedAttributes = 0;
+        private List<Package> relevantPackages = new List<Package>();
 
         /* ***** CHANGES ***** */
         private List<Change> changes = new List<Change>();
@@ -288,6 +289,11 @@ namespace ModelicaChangeAnalyzer.Changes
         {
             get { return numOfRemovedAttributes; }
             set { numOfRemovedAttributes = value; }
+        }
+
+        public List<Package> RelevantPackages
+        {
+            get { return relevantPackages; }
         }
 
         public List<Change> Changes
