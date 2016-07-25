@@ -121,6 +121,8 @@ namespace ModelicaChangeAnalyzer.Datamodel
             {
                 numOfChanges++;
                 changes.Add(new Change("~ Note", false).AppendTabs(1));
+                changes.Add(new Change(oldConnector.Note, false).AppendTabs(2));
+                changes.Add(new Change(Note, false).AppendTabs(2));
             }
 
             if (numOfChanges > 0)

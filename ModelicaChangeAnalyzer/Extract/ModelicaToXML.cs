@@ -199,6 +199,7 @@ namespace ModelicaChangeAnalyzer.Extract
                         comment = false;
                         newToken += token;
                         result.Add(newToken);
+                        newToken = "";
             }
                     else
             {
@@ -210,7 +211,8 @@ namespace ModelicaChangeAnalyzer.Extract
                     if ((token.StartsWith("\"") && token.EndsWith("\"") && token.Length > 1 )|| !token.StartsWith("\""))
                     {
                         result.Add(token);
-            }
+                        newToken = "";
+                    }
                     else
             {
                         comment = true;
