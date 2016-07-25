@@ -73,7 +73,7 @@ namespace ModelicaChangeAnalyzer.Datamodel
         {
             if(target == null)
                 return parentElement.GetPath() + " -> null";
-            return source.GetPath() + " -> " + target.GetPath();
+            return source.GetPath() + " -> " + target.GetPath() + "(" + uid + ")";
         }
 
         #endregion
@@ -117,7 +117,7 @@ namespace ModelicaChangeAnalyzer.Datamodel
                 changes.Add(new Change("~ Target Cardinality (" + UID + "): " + oldConnector.TargetCardinality + " -> " + TargetCardinality, false).AppendTabs(1));
             }
 
-            if (((RelevantOnly && !ConfigReader.ExcludedAttributeNote) || !RelevantOnly) && !Equals(note, oldConnector.Note))
+            if (((RelevantOnly && !ConfigReader.ExcludedAttributeNote) || !RelevantOnly) && !Equals(note, oldConnector.Note) && !target)
             {
                 numOfChanges++;
                 changes.Add(new Change("~ Note", false).AppendTabs(1));
