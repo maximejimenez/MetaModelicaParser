@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ARCA_CONFIG xmlns="C:\Users\USERNAME\Desktop\ModelicaResults\Config\" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="C:\Users\USERNAME\Desktop\ModelicaResults\Config\ ARCA_Schema.xsd">
+	<EA-EXPORT>
+		<EXCLUDE-CASE-SENSITIVITY>true</EXCLUDE-CASE-SENSITIVITY>
+		<EXCLUDE-PACKAGES>
+			<PACKAGE-NAME>NonRelevantPackage.mo</PACKAGE-NAME>
+		</EXCLUDE-PACKAGES>
+		<EXCLUDED-ELEMENTS>
+			<ELEMENT-NOTE>true</ELEMENT-NOTE>
+			<ELEMENT-TYPE>Note</ELEMENT-TYPE>
+		</EXCLUDED-ELEMENTS>
+		<EXCLUDED-ATTRIBUTES>
+			<ATTRIBUTE-NOTE>true</ATTRIBUTE-NOTE>
+		</EXCLUDED-ATTRIBUTES>
+		<EXCLUDED-CONNECTORS>
+			<CONNECTOR-TYPE>NoteLink</CONNECTOR-TYPE>
+			<CONNECTOR-NOTE>true</CONNECTOR-NOTE>
+		</EXCLUDED-CONNECTORS>
+	</EA-EXPORT>
+	<ROLES>
+		<ROLE Model="M1">
+			<NAME>Metamodel</NAME>
+			<PACKAGE>Absyn.mo</PACKAGE>
+		</ROLE>
+	</ROLES>
+	<RESULTS_PATH>C:\Users\USERNAME\Desktop\ModelicaResults\Results</RESULTS_PATH>
+	<EXTRACT_MULTIPLE EXTRACT_PATH="C:\Users\USERNAME\Desktop\ModelicaResults\XML">
+		<RELEASE VERSION="1.9.2">C:\Users\USERNAME\Desktop\ModelicaResults\Metamodels\OMCompiler-1.9.2\Compiler\FrontEnd</RELEASE>
+		<RELEASE VERSION="1.9.3">C:\Users\USERNAME\Desktop\ModelicaResults\Metamodels\OMCompiler-1.9.3\Compiler\FrontEnd</RELEASE>
+		<RELEASE VERSION="1.9.4">C:\Users\USERNAME\Desktop\ModelicaResults\Metamodels\OMCompiler-1.9.4\Compiler\FrontEnd</RELEASE>
+		<RELEASE VERSION="1.9.5">C:\Users\USERNAME\Desktop\ModelicaResults\Metamodels\OMCompiler-1.9.5\Compiler\FrontEnd</RELEASE>
+		<RELEASE VERSION="1.9.6">C:\Users\USERNAME\Desktop\ModelicaResults\Metamodels\OMCompiler-1.9.6\Compiler\FrontEnd</RELEASE>
+	</EXTRACT_MULTIPLE>
+	<REPORT_CHANGES REPORT_PATH="C:\Users\USERNAME\Desktop\ModelicaResults\Results">
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.2.xml</RELEASE>
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.3.xml</RELEASE>	
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.4.xml</RELEASE>	
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.5.xml</RELEASE>	
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.6.xml</RELEASE>	
+	</REPORT_CHANGES>
+	<REPORT_METRICS REPORT_PATH="C:\Users\USERNAME\Desktop\ModelicaResults\Results">
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.2.xml</RELEASE>
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.3.xml</RELEASE>	
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.4.xml</RELEASE>	
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.5.xml</RELEASE>	
+		<RELEASE>C:\Users\USERNAME\Desktop\ModelicaResults\XML\1.9.6.xml</RELEASE>	
+	</REPORT_METRICS>
+</ARCA_CONFIG>
